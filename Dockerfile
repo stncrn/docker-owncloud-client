@@ -26,11 +26,12 @@ RUN apt update \
     /usr/share/lintian
 
 # Add the ownCloud repository and install it
-RUN echo 'deb https://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_10/ /' > /etc/apt/sources.list.d/owncloud-client.list \
-    && wget -nv 'https://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_10/Release.key' -O Release.key \
+RUN echo 'deb https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Debian_10/ /' > /etc/apt/sources.list.d/owncloud-client.list \
+    && wget -nv 'https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Debian_10/Release.key' -O Release.key \
     && apt-key add - < Release.key \
     && apt update \
-    && apt install -yq --no-install-recommends owncloud-client \
+    && apt install -yq --no-install-recommends \
+    owncloud-client \
     && apt upgrade -y \
     && apt-get clean \
     && apt -y autoremove \
