@@ -7,7 +7,7 @@ This container should work with ownCloud, NextCloud, TransIP STACK and any other
 
 I forked the original project to be able to run TransIP's STACK in a Docker.
 
-The main use of this Docker is to be able to syncronise with another ownCloud-like environment that is not part of the server that you run this Docker on.
+The main use of this Docker is to be able to synchronise with another ownCloud-like environment that is not part of the server that you run this Docker on.
 Examples of this may be the ownCloud or Nextcloud environment of a friend, a paid ownCloud-like environment like TransIP STACK.
 
 ## Docker Features
