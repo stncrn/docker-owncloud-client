@@ -8,13 +8,13 @@ This container should work with any ownCloud, Nextcloud, TransIP STACK or any ot
 I forked the original project to be able to run TransIP's STACK in a Docker.
 
 The main use of this Docker is to be able to synchronise with a ownCloud or Nextcloud-like environment that is not part of the server that you run this Docker on.
-Example usecase of this container is that you have a remote (ownCloud or Nextcloud) cloud storage somewhere, that you wish to have continously synced with your server that runs Docker. For example, the ownCloud/Nextcloud of a friend or a paid ownCloud/Nextcloud-like environment like TransIP STACK.
+Example use case of this container is that you have a remote (ownCloud or Nextcloud) cloud storage somewhere, that you wish to have continously synced with your server that runs this Docker. Like the ownCloud/Nextcloud of a friend or a paid ownCloud/Nextcloud-like environment like TransIP STACK.
 
 ## Docker Features
 * Base: Debian 10
 * Latest ownCloud Client from the OpenSUSE repositories
 * Size: <100MB
-* **Ability to only sync only one folder**
+* **Ability to only sync only one (sub)folder**
 * Created with [Unraid](https://unraid.net/) in mind
 
 
