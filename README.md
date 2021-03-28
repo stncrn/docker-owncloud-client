@@ -12,7 +12,6 @@ Example use case of this container is that you have a remote (ownCloud or Nextcl
 
 ## Docker Features
 * Base: Debian 10
-* Latest ownCloud Client from the OpenSUSE repositories
 * Size: <100MB
 * **Ability to only sync only one (sub)folder**
 * Created with [Unraid](https://unraid.net/) in mind
