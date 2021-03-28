@@ -2,19 +2,18 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/dyonr/owncloud-client)](https://hub.docker.com/r/dyonr/owncloud-client)
 [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/dyonr/owncloud-client/latest)](https://hub.docker.com/r/dyonr/owncloud-client)  
 
-Dockerized ownCloud CLI Client (owncloudcmd) to sync from any supported ownCloud-like environment.  
-This container should work with ownCloud, NextCloud, TransIP STACK and any other ownCloud/NextCloud based storage endpoints.
+Dockerized ownCloud CLI Client (owncloudcmd) to sync from any supported ownCloud or Nextcloud-like environment.  
+This container should work with any ownCloud, Nextcloud, TransIP STACK or any other ownCloud/Nextcloud based storage endpoint.
 
 I forked the original project to be able to run TransIP's STACK in a Docker.
 
-The main use of this Docker is to be able to synchronise with another ownCloud-like environment that is not part of the server that you run this Docker on.
-Examples of this may be the ownCloud or Nextcloud environment of a friend, a paid ownCloud-like environment like TransIP STACK.
+The main use of this Docker is to be able to synchronise with a ownCloud or Nextcloud-like environment that is not part of the server that you run this Docker on.
+Example use case of this container is that you have a remote (ownCloud or Nextcloud) cloud storage somewhere, that you wish to have continously synced with your server that runs this Docker. Like the ownCloud/Nextcloud of a friend or a paid ownCloud/Nextcloud-like environment like TransIP STACK.
 
 ## Docker Features
 * Base: Debian 10
-* Latest ownCloud Client from the OpenSUSE repositories
 * Size: <100MB
-* **Ability to only sync only one folder**
+* **Ability to only sync only one (sub)folder**
 * Created with [Unraid](https://unraid.net/) in mind
 
 
@@ -37,9 +36,9 @@ $ docker run -d \
 ## Environment Variables
 | Variable | Required | Function | Example | Default |
 |----------|----------|----------|----------|----------|
-|`OC_USER`| Yes | Username to connect to ownCloud |`OC_USER=dyonr`||
+|`OC_USER`| Yes | Username (or email) to connect to ownCloud |`OC_USER=dyonr`||
 |`OC_PASS`| Yes | Password or App-Token for the ownCloud user |`OC_PASS=ac98df79ed7fb`||
-|`OC_SERVER`| Yes | ownCloud Server URL, with, if necessary, with port |`OC_SERVER=example.com:8443`||
+|`OC_SERVER`| Yes | ownCloud Environment server address, with port if it's not a default port number |`OC_SERVER=example.com:8443`||
 |`OC_PROTO`| No | Connect via http or https |`OC_PROTO=https`|`https`|
 |`OC_URLPATH`| No | Server path to the ownCloud instance (example: https://example.com:8443/owncloud/ becomes `/owncloud/`) |`OC_URLPATH=/owncloud/`| `/owncloud/`|
 |`OC_WEBDAV`| No | In case the webdav path is not `remote.php/webdav`, you can change it here |`OC_WEBDAV=remote.php/webdav`| `remote.php/webdav` |
@@ -60,9 +59,9 @@ $ docker run -d \
 This Docker container exposes no ports, has no UI and therfore does not need to have any ports exposed.
 
 # Issues
-If you are having issues with this container please submit an issue on GitHub.  
-Please provide logs, Docker version and other information that can simplify reproducing the issue.  
-If possible, always use the most up to date version of Docker, you operating system, kernel and the container itself. Support is always a best-effort basis.  
+If you are having issues with this container please submit an issue on GitHub.
+Please provide logs, Docker version and other information that can simplify reproducing the issue.
+If possible, always use the most up to date version of Docker, you operating system, kernel and the container itself. Support is always a best-effort basis.
 
 ## Disclaimer
-I am not responsible for any data loss due wrong configurations
+I am not responsible for any data loss due wrong configurations.
