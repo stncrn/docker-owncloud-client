@@ -1,5 +1,5 @@
 occlient:
-  image: dyonr/owncloud-client
+  image: stncrn/owncloud-client
   volumes:
     - ${PWD}/mydata:/ocdata
   environment:
