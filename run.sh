@@ -23,8 +23,8 @@ echo "[INFO] Running owncloudcmd as following:" | ts '%Y-%m-%d %H:%M:%.S'
 echo "[INFO] owncloudcmd $SELFSIGN $SYNCHIDDEN $SILENCEOUTPUT -n --non-interactive /ocdata $OC_PROTO://$OC_SERVER$OC_URLPATH$OC_WEBDAV$OC_FILEPATH" | ts '%Y-%m-%d %H:%M:%.S'
 while true
 do 
-	su - occlient -c "owncloudcmd $SELFSIGN $SYNCHIDDEN $SILENCEOUTPUT -n --non-interactive /ocdata $OC_PROTO://$OC_SERVER$OC_URLPATH$OC_WEBDAV$OC_FILEPATH"
+	su - occlient -c "umask 000; owncloudcmd $SELFSIGN $SYNCHIDDEN $SILENCEOUTPUT -n --non-interactive /ocdata $OC_PROTO://$OC_SERVER$OC_URLPATH$OC_WEBDAV$OC_FILEPATH"
 	sleep $RUN_INTERVAL
 done
 
-umask 000
+
